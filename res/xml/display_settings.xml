@@ -25,6 +25,10 @@
         android:layout="@layout/dot_preference_category"
         android:title="@string/brightness_title" />
 
+   <Preference
+        android:key="display_animation"
+        android:layout="@layout/display_animation" />
+
     <com.android.settingslib.RestrictedPreference
         android:key="brightness"
         android:title="@string/brightness"
