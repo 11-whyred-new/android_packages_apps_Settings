@@ -39,7 +39,7 @@ import android.widget.Button;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import androidx.preference.ListPreference;
+import androidx.preference.DropDownPreference;
 import androidx.preference.Preference;
 import androidx.preference.PreferenceScreen;
 import androidx.preference.PreferenceViewHolder;
@@ -77,7 +77,7 @@ public class DcDimmingSettings extends DashboardFragment
     private int mMaximumBacklight;
 
     private LayoutPreference mRestoreAuto;
-    private ListPreference mDropPreference;
+    private DropDownPreference mDropPreference;
     private SeekBar mSeekBar;
     private TextView mBrightnessValue;
     private TextView mBrightnessTitle;
@@ -189,7 +189,7 @@ public class DcDimmingSettings extends DashboardFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        if (preference instanceof ListPreference) {
+        if (preference instanceof DropDownPreference) {
             mDcDimmingManager.setAutoMode(Integer.parseInt((String) newValue));
         }
         return true;
